@@ -1,8 +1,14 @@
- function App() {
+import { Routes, Route } from "react-router-dom";
+import Login from "../views/login";
+import Dashboard from "../views/dashboard";
+
+function App() {
   return (
-    <div className="App">
-      App
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/*" element={<Dashboard />} />
+    </Routes>
   );
 }
 
