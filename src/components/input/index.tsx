@@ -5,7 +5,6 @@ interface IInputProps {
   value?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   title?: string;
-  error?: boolean;
   errorMessage?: string;
 }
 
@@ -16,7 +15,6 @@ const defaultProps: IInputProps = {
   value: "",
   onChange: () => {},
   title: "",
-  error: false,
   errorMessage: "",
 };
 
@@ -27,7 +25,6 @@ function Input({
   value,
   onChange,
   title,
-  error,
   errorMessage,
 }: IInputProps): JSX.Element {
   return (
@@ -40,7 +37,7 @@ function Input({
         value={value}
         onChange={onChange}
       />
-      {error && <p>{errorMessage}</p>}
+      {errorMessage && <p>{errorMessage}</p>}
     </>
   );
 }
