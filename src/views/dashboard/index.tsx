@@ -1,10 +1,13 @@
-import ContentWrapper from './contentWrapper';
+import ContentWrapper from "./contentWrapper";
+import SideNav from "../../components/sidenav";
+
 function Dashboard() {
   return (
     <div>
-        <ContentWrapper />
+      <SideNav />
+      <ContentWrapper />
     </div>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;
